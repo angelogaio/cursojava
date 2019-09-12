@@ -6,7 +6,23 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
+		
+		method1();
 
+		System.out.println("FIM DO PROGRAMA");		
+
+	}
+	
+	public static void method1() {
+		System.out.println("***METHOD1 START***");
+		
+		method2();
+		
+		System.out.println("***METHOD1 END***");
+	}
+	
+	public static void method2() {
+		System.out.println("***METHOD2 START***");
 		Scanner sc = new Scanner(System.in);
 		
 		try {
@@ -16,14 +32,13 @@ public class Program {
 		}
 		catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Posição Invalida");
+			e.printStackTrace();
 		}
 		catch(InputMismatchException e) {
 			System.out.println("Caracter Invalido");
 		}
-		System.out.println("FIM DO PROGRAMA");
-		
+		System.out.println("***METHOD2 END***");
 		sc.close();
-
 	}
 
 }
